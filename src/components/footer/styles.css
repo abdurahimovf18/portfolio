@@ -1,0 +1,11 @@
+
+
+.footer-color {
+    @apply relative;
+}
+
+
+.footer-color::after {
+    content: "";
+    @apply absolute left-0 top-0 w-full h-full bg-foreground opacity-5 z-10 pointer-events-none;
+}

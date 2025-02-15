@@ -1,0 +1,4 @@
+
+.closed {
+    @apply opacity-0 pointer-events-none absolute;
+}

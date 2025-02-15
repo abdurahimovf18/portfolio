@@ -1,0 +1,112 @@
+
+.big-btn {
+    @apply font-bold xxs:text-[0.7rem] xl:text-xl xxs:w-[120px] xl:w-[150px] xxs:h-[27px] xl:h-[35px] flex justify-center items-center 
+    rounded-md hover:opacity-80 transition-all duration-100 ease-in-out;
+}
+
+.fade-img-box {
+    @apply relative overflow-hidden;
+}
+
+.fade-img-box::before,
+.fade-img-box::after {
+    content: "";
+    @apply absolute left-0 top-0 w-full h-full z-10;
+}
+
+.fade-img-box::before {
+    background: linear-gradient(to top, var(--background), rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(100px);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.fade-img-box::after {
+    background: linear-gradient(to right, var(--background), rgba(0, 0, 0, 0.1));
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.project-choice {
+    perspective: 800px;
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(-5deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, margin 0.5s ease;
+    box-shadow: 
+    5px 10px 15px rgba(0, 0, 0, 0.3),  /* Main shadow */
+    10px 20px 25px rgba(0, 0, 0, 0.2), /* Larger soft shadow */
+    0px 5px 10px rgba(255, 255, 255, 0.1) inset; /* Soft inner glow */
+    @apply mx-[-10px];
+}
+
+.project-choice:hover {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.05);
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4);
+    @apply mx-2;
+}
+
+.skill-choise-btn {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.skill-choise-btn::after {
+    content: "";
+    @apply bg-foreground w-full h-full absolute left-0 top-0 opacity-20;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) inset;
+}
+
+.blur-btn {
+    backdrop-filter: blur(5px);
+}
+
+.chosen-skill-box {
+    @apply relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chosen-skill-box::after {
+    content: "";
+    @apply bg-foreground opacity-[0.02] w-full h-full absolute left-0 top-0 pointer-events-none;
+}
+
+.chosen-skill-image {
+    @apply relative;
+}
+
+.chosen-skill-image::after {
+    content: "";
+    @apply bg-foreground opacity-10 w-full h-full absolute left-0 top-0;
+
+}
+
+.chosen-skill-box:hover .chosen-skill-image {
+    @apply blur-sm;
+}
+
+.education-box {
+
+}
+
+.education-box::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @apply bg-foreground opacity-5 absolute pointer-events-none;
+}
+
+.education-box::before {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    @apply z-10 absolute pointer-events-none;
+}
