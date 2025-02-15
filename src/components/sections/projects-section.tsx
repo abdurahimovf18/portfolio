@@ -6,6 +6,7 @@ import "./styles.css"
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+
 interface Project {
     link: string;
     project_name: string;
@@ -15,39 +16,37 @@ interface Project {
 }
 
 
-
 export function ProjectsSection() {
-
     const projects: Project[] = [
         {
             link: "https://github.com/abdurahimovf18/ms-watches-frontend",
             project_name: "Montana Swiss",
-            description: "Montana Swiss is a high-end watch e-commerce platform built using modern web technologies. The project leverages Next.js and React.js for a dynamic and responsive frontend, while FastAPI and SQLAlchemy power the backend, ensuring efficient data handling and API performance. Features include product filtering, secure payment integration, and an admin dashboard.",
+            description: "Montana Swiss is a premium e-commerce platform for high-end watches, built with modern web technologies. The frontend is developed using Next.js and React.js for a seamless and responsive user experience, while the backend leverages FastAPI and SQLAlchemy for efficient data handling and high-performance APIs. Key features include advanced product filtering, secure payment integration, and an intuitive admin dashboard.",
             small_image: "/pi/ms-watches.png",
             big_image: "/pi/ms-watches.png"
         },
         {
             link: "https://github.com/abdurahimovf18/wood-decoration",
             project_name: "Wood Decoration",
-            description: "pi/wood-decoration.png",
+            description: "A study project I built as part of my final exam, demonstrating my skills in web development.",
             small_image: "/pi/image.png",
             big_image: "/pi/image.png"
         },
         {
             link: "https://github.com/abdurahimovf18/My-first-portfolio.git",
             project_name: "My First Portfolio",
-            description: "This portfolio was build using Django when I was studying in Najot Ta'lim",
+            description: "My first portfolio website, built with Django during my studies at Najot Ta'lim.",
             small_image: "/pi/first-portfolio.png",
             big_image: "/pi/first-portfolio.png"
         },
         {
             link: "https://github.com/abdurahimovf18/portfolio.git",
             project_name: "Portfolio",
-            description: "A portfolio's frontend part which I did in a day using NextJs",
-            big_image: "/pi/portfolio.png",
+            description: "A modern portfolio frontend, developed in just one day using Next.js.",
             small_image: "/pi/portfolio.png",
+            big_image: "/pi/portfolio.png",
         }
-    ];
+    ];    
 
     if (typeof projects === "undefined" || projects.length < 1) return null
 

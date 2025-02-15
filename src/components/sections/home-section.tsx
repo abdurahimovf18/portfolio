@@ -28,9 +28,9 @@ export function HomeSection() {
                     </div>
                     
                     <div className="flex justify-center items-center gap-2 pt-4">
-                        <button className="big-btn bg-sky-500 text-[#fff]">
-                            Download CW
-                        </button>
+                        <Link href={"/pdf/output.pdf"} download={"/pdf/output.pdf"} className="big-btn bg-sky-500 text-[#fff]">
+                            Download PDF
+                        </Link>
                         <Link href="https://github.com/abdurahimovf18" className="big-btn ring-sky-500 text-sky-500 ring-1">
                             Go to GitHUB
                         </Link>
